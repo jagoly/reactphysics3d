@@ -118,7 +118,8 @@ elseif(CMAKE_SYSTEM MATCHES "Linux")
   list(APPEND NANOGUI_EXTRA_LIBS GL Xxf86vm Xrandr Xinerama Xcursor Xi X11 pthread dl rt)
 endif()
 
-include_directories(ext/eigen ext/glfw/include ext/nanovg/src include ${CMAKE_CURRENT_BINARY_DIR})
+include_directories(SYSTEM ext/eigen)
+include_directories(ext/glfw/include ext/nanovg/src include ${CMAKE_CURRENT_BINARY_DIR})
 
 # Run simple C converter to put font files into the data segment
 add_executable(bin2c resources/bin2c.c)
