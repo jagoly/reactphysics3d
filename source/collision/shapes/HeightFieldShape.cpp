@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "HeightFieldShape.h"
+#include <rp3d/collision/shapes/HeightFieldShape.hpp>
 
 using namespace reactphysics3d;
 

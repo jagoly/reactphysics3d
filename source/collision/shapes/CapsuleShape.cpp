@@ -23,11 +23,10 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "CapsuleShape.h"
-#include "collision/ProxyShape.h"
-#include "configuration.h"
 #include <cassert>
+
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/shapes/CapsuleShape.hpp>
 
 using namespace reactphysics3d;
 

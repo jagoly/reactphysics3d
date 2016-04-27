@@ -28,7 +28,7 @@
 
 // Libraries
 #include "openglframework.h"
-#include "reactphysics3d.h"
+#include "reactphysics3d.hpp"
 #include "Box.h"
 #include "SceneDemo.h"
 #include "HeightField.h"

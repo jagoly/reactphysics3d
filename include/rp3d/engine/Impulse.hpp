@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_IMPULSE_H
 #define REACTPHYSICS3D_IMPULSE_H
 
-// Libraries
-#include "mathematics/mathematics.h"
+#include <rp3d/mathematics/mathematics.hpp>
 
 namespace reactphysics3d {
 

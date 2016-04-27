@@ -23,13 +23,10 @@
 *                                                                               *
 ********************************************************************************/
 
+#include <rp3d/collision/narrowphase/EPA/EdgeEPA.hpp>
+#include <rp3d/collision/narrowphase/EPA/TrianglesStore.hpp>
+#include <rp3d/collision/narrowphase/EPA/TriangleEPA.hpp>
 
-// Libraries
-#include "TriangleEPA.h"
-#include "EdgeEPA.h"
-#include "TrianglesStore.h"
-
-// We use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

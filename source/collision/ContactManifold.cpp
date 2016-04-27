@@ -23,9 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include <iostream>
-#include "ContactManifold.h"
+#include <rp3d/collision/ContactManifold.hpp>
 
 using namespace reactphysics3d;
 

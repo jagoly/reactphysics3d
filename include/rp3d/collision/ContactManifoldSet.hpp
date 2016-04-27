@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_CONTACT_MANIFOLD_SET_H
 #define REACTPHYSICS3D_CONTACT_MANIFOLD_SET_H
 
-// Libraries
-#include "ContactManifold.h"
+#include <rp3d/collision/ContactManifold.hpp>
 
 namespace reactphysics3d {
 

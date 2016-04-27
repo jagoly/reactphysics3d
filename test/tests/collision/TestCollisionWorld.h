@@ -27,7 +27,7 @@
 #define TEST_COLLISION_WORLD_H
 
 // Libraries
-#include "reactphysics3d.h"
+#include "reactphysics3d.hpp"
 
 /// Reactphysics3D namespace
 namespace reactphysics3d {

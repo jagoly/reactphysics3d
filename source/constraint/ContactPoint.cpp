@@ -23,12 +23,10 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ContactPoint.h"
-#include "collision/ProxyShape.h"
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
 
 using namespace reactphysics3d;
-using namespace std;
 
 // Constructor
 ContactPoint::ContactPoint(const ContactPointInfo& contactInfo)

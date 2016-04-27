@@ -23,11 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Vector2.h"
-#include <vector>
+#include <rp3d/mathematics/Vector2.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
 
 // Constructor

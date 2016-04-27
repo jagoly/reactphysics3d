@@ -26,16 +26,13 @@
 #ifndef REACTPHYSICS3D_DYNAMICS_WORLD_H
 #define REACTPHYSICS3D_DYNAMICS_WORLD_H
 
-// Libraries
-#include "CollisionWorld.h"
-#include "collision/CollisionDetection.h"
-#include "ContactSolver.h"
-#include "ConstraintSolver.h"
-#include "body/RigidBody.h"
-#include "Island.h"
-#include "configuration.h"
+#include <rp3d/body/RigidBody.hpp>
+#include <rp3d/collision/CollisionDetection.hpp>
+#include <rp3d/engine/ContactSolver.hpp>
+#include <rp3d/engine/ConstraintSolver.hpp>
+#include <rp3d/engine/CollisionWorld.hpp>
+#include <rp3d/engine/Island.hpp>
 
-/// Namespace ReactPhysics3D
 namespace reactphysics3d {
 
 // Class DynamicsWorld

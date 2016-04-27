@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "SliderJoint.h"
+#include <rp3d/constraint/SliderJoint.hpp>
 
 using namespace reactphysics3d;
 

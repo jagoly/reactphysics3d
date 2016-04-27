@@ -26,13 +26,9 @@
 #ifndef REACTPHYSICS3D_TRIANGLE_EPA_H
 #define REACTPHYSICS3D_TRIANGLE_EPA_H
 
-// Libraries
-#include "mathematics/mathematics.h"
-#include "configuration.h"
-#include "EdgeEPA.h"
-#include <cassert>
+#include <rp3d/collision/narrowphase/EPA/EdgeEPA.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Prototypes

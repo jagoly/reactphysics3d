@@ -23,12 +23,9 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "TriangleShape.h"
-#include "collision/ProxyShape.h"
-#include "engine/Profiler.h"
-#include "configuration.h"
-#include <cassert>
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/shapes/TriangleShape.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 using namespace reactphysics3d;
 

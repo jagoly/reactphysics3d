@@ -26,12 +26,10 @@
 #ifndef REACTPHYSICS3D_OVERLAPPING_PAIR_H
 #define	REACTPHYSICS3D_OVERLAPPING_PAIR_H
 
-// Libraries
-#include "collision/ContactManifoldSet.h"
-#include "collision/ProxyShape.h"
-#include "collision/shapes/CollisionShape.h"
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/ContactManifoldSet.hpp>
+#include <rp3d/collision/shapes/CollisionShape.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Type for the overlapping pair ID
@@ -187,4 +185,3 @@ inline void OverlappingPair::clearContactPoints() {
 }
 
 #endif
-

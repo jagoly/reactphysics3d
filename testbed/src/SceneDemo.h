@@ -29,7 +29,7 @@
 // Libraries
 #include "Scene.h"
 #include "VisualContactPoint.h"
-#include "reactphysics3d.h"
+#include "reactphysics3d.hpp"
 
 // Constants
 const int SHADOWMAP_WIDTH = 2048;

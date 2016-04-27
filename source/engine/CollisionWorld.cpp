@@ -23,13 +23,9 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "CollisionWorld.h"
-#include <algorithm>
+#include <rp3d/engine/CollisionWorld.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
-using namespace std;
 
 // Constructor
 CollisionWorld::CollisionWorld()

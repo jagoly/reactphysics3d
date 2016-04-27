@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "CylinderShape.h"
-#include "collision/ProxyShape.h"
-#include "configuration.h"
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/shapes/CylinderShape.hpp>
 
 using namespace reactphysics3d;
 

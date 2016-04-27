@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Joint.h"
+#include <rp3d/constraint/Joint.hpp>
 
 using namespace reactphysics3d;
 

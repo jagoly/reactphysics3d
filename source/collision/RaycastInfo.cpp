@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "decimal.h"
-#include "RaycastInfo.h"
-#include "ProxyShape.h"
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/RaycastInfo.hpp>
 
 using namespace reactphysics3d;
 

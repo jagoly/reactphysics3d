@@ -23,15 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Matrix2x2.h"
+#include <rp3d/mathematics/Matrix2x2.hpp>
 
 using namespace reactphysics3d;
 
 // Constructor of the class Matrix2x2
 Matrix2x2::Matrix2x2() {
-
-    // Initialize all values in the matrix to zero
     setAllValues(0.0, 0.0, 0.0, 0.0);
 }
 
@@ -42,8 +39,6 @@ Matrix2x2::Matrix2x2(decimal value) {
 
 // Constructor with arguments
 Matrix2x2::Matrix2x2(decimal a1, decimal a2, decimal b1, decimal b2) {
-
-    // Initialize the matrix with the values
     setAllValues(a1, a2, b1, b2);
 }
 

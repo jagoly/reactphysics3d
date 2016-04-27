@@ -23,13 +23,11 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "EPAAlgorithm.h"
-#include "engine/Profiler.h"
-#include "collision/narrowphase//GJK/GJKAlgorithm.h"
-#include "TrianglesStore.h"
+#include <rp3d/collision/narrowphase/GJK/GJKAlgorithm.hpp>
+#include <rp3d/collision/narrowphase/EPA/TrianglesStore.hpp>
+#include <rp3d/collision/narrowphase/EPA/EPAAlgorithm.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
-// We want to use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

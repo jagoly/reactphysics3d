@@ -28,11 +28,9 @@
 
 #ifdef IS_PROFILING_ACTIVE
 
-// Libraries
-#include "configuration.h"
-#include "Timer.h"
+#include <rp3d/configuration.hpp>
+#include <rp3d/engine/Timer.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class ProfileNode

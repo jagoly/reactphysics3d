@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "HingeJoint.h"
-#include "engine/ConstraintSolver.h"
-#include <cmath>
+#include <rp3d/constraint/HingeJoint.hpp>
+#include <rp3d/engine/ConstraintSolver.hpp>
 
 using namespace reactphysics3d;
 

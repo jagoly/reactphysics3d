@@ -23,12 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Quaternion.h"
-#include "Vector3.h"
-#include <cassert>
+#include <rp3d/mathematics/Quaternion.hpp>
 
-// Namespace
 using namespace reactphysics3d;
 
 // Constructor of the class

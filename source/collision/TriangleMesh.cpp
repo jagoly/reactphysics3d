@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "TriangleMesh.h"
+#include <rp3d/collision/TriangleMesh.hpp>
 
 using namespace reactphysics3d;
 

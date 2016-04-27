@@ -26,11 +26,8 @@
 #ifndef REACTPHYSICS3D_SIMPLEX_H
 #define	REACTPHYSICS3D_SIMPLEX_H
 
-// Libraries
-#include "mathematics/mathematics.h"
-#include <vector>
+#include <rp3d/mathematics/mathematics.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Type definitions

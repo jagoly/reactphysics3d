@@ -23,11 +23,9 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "OverlappingPair.h"
+#include <rp3d/engine/OverlappingPair.hpp>
 
 using namespace reactphysics3d;
-
 
 // Constructor
 OverlappingPair::OverlappingPair(ProxyShape* shape1, ProxyShape* shape2,

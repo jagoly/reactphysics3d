@@ -26,9 +26,7 @@
 #ifndef REACTPHYSICS3D_FIXED_JOINT_H
 #define REACTPHYSICS3D_FIXED_JOINT_H
 
-// Libraries
-#include "Joint.h"
-#include "mathematics/mathematics.h"
+#include <rp3d/constraint/Joint.hpp>
 
 namespace reactphysics3d {
 

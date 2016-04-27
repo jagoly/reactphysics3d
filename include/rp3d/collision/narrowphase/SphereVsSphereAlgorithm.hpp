@@ -26,13 +26,10 @@
 #ifndef REACTPHYSICS3D_SPHERE_VS_SPHERE_ALGORITHM_H
 #define	REACTPHYSICS3D_SPHERE_VS_SPHERE_ALGORITHM_H
 
-// Libraries
-#include "body/Body.h"
-#include "constraint/ContactPoint.h"
-#include "NarrowPhaseAlgorithm.h"
+#include <rp3d/body/Body.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/collision/narrowphase/NarrowPhaseAlgorithm.hpp>
 
-
-/// Namespace ReactPhysics3D
 namespace reactphysics3d {
 
 // Class SphereVsSphereAlgorithm
@@ -71,4 +68,3 @@ class SphereVsSphereAlgorithm : public NarrowPhaseAlgorithm {
 }
 
 #endif
-

@@ -26,9 +26,7 @@
 #ifndef REACTPHYSICS3D_HINGE_JOINT_H
 #define REACTPHYSICS3D_HINGE_JOINT_H
 
-// Libraries
-#include "Joint.h"
-#include "mathematics/mathematics.h"
+#include <rp3d/constraint/Joint.hpp>
 
 namespace reactphysics3d {
 
@@ -401,6 +399,5 @@ inline size_t HingeJoint::getSizeInBytes() const {
 }
 
 }
-
 
 #endif

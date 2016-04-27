@@ -26,13 +26,10 @@
 #ifndef REACTPHYSICS3D_CYLINDER_SHAPE_H
 #define REACTPHYSICS3D_CYLINDER_SHAPE_H
 
-// Libraries
-#include "ConvexShape.h"
-#include "body/CollisionBody.h"
-#include "mathematics/mathematics.h"
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/shapes/ConvexShape.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
 
-
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class CylinderShape
@@ -179,4 +176,3 @@ inline bool CylinderShape::testPointInside(const Vector3& localPoint, ProxyShape
 }
 
 #endif
-

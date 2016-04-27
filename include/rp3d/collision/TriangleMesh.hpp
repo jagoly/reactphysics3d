@@ -26,10 +26,10 @@
 #ifndef REACTPHYSICS3D_TRIANGLE_MESH_H
 #define REACTPHYSICS3D_TRIANGLE_MESH_H
 
-// Libraries
-#include <vector>
 #include <cassert>
-#include "TriangleVertexArray.h"
+#include <vector>
+
+#include <rp3d/collision/TriangleVertexArray.hpp>
 
 namespace reactphysics3d {
 

@@ -26,14 +26,12 @@
 #ifndef REACTPHYSICS3D_NARROW_PHASE_ALGORITHM_H
 #define REACTPHYSICS3D_NARROW_PHASE_ALGORITHM_H
 
-// Libraries
-#include "body/Body.h"
-#include "constraint/ContactPoint.h"
-#include "memory/MemoryAllocator.h"
-#include "engine/OverlappingPair.h"
-#include "collision/CollisionShapeInfo.h"
+#include <rp3d/body/Body.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/collision/CollisionShapeInfo.hpp>
+#include <rp3d/engine/OverlappingPair.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
 
-/// Namespace ReactPhysics3D
 namespace reactphysics3d {
 
 class CollisionDetection;
@@ -112,5 +110,3 @@ inline void NarrowPhaseAlgorithm::setCurrentOverlappingPair(OverlappingPair* ove
 }
 
 #endif
-
-

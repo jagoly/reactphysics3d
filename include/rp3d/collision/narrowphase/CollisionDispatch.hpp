@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_COLLISION_DISPATCH_H
 #define	REACTPHYSICS3D_COLLISION_DISPATCH_H
 
-// Libraries
-#include "NarrowPhaseAlgorithm.h"
+#include <rp3d/collision/narrowphase/NarrowPhaseAlgorithm.hpp>
 
 namespace reactphysics3d {
 

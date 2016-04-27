@@ -23,16 +23,13 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "DynamicsWorld.h"
-#include "constraint/BallAndSocketJoint.h"
-#include "constraint/SliderJoint.h"
-#include "constraint/HingeJoint.h"
-#include "constraint/FixedJoint.h"
+#include <rp3d/engine/DynamicsWorld.hpp>
+#include <rp3d/constraint/BallAndSocketJoint.hpp>
+#include <rp3d/constraint/SliderJoint.hpp>
+#include <rp3d/constraint/HingeJoint.hpp>
+#include <rp3d/constraint/FixedJoint.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
-using namespace std;
 
 // Constructor
 /**

@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Island.h"
+#include <rp3d/engine/Island.hpp>
 
 using namespace reactphysics3d;
 

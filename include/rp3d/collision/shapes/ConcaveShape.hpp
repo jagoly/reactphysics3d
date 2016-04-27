@@ -26,11 +26,9 @@
 #ifndef REACTPHYSICS3D_CONCAVE_SHAPE_H
 #define REACTPHYSICS3D_CONCAVE_SHAPE_H
 
-// Libraries
-#include "CollisionShape.h"
-#include "TriangleShape.h"
+#include <rp3d/collision/shapes/CollisionShape.hpp>
+#include <rp3d/collision/shapes/TriangleShape.hpp>
 
-// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class TriangleCallback

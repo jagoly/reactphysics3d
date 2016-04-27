@@ -26,10 +26,8 @@
 #ifndef REACTPHYSICS3D_CONVEX_SHAPE_H
 #define REACTPHYSICS3D_CONVEX_SHAPE_H
 
-// Libraries
-#include "CollisionShape.h"
+#include <rp3d/collision/shapes/CollisionShape.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class ConvexShape

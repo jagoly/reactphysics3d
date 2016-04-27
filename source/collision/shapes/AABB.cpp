@@ -23,13 +23,9 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "AABB.h"
-#include "configuration.h"
-#include <cassert>
+#include <rp3d/collision/shapes/AABB.hpp>
 
 using namespace reactphysics3d;
-using namespace std;
 
 // Constructor
 AABB::AABB() {

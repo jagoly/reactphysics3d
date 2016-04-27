@@ -26,11 +26,10 @@
 #ifndef REACTPHYSICS3D_DEFAULT_COLLISION_DISPATCH_H
 #define	REACTPHYSICS3D_DEFAULT_COLLISION_DISPATCH_H
 
-// Libraries
-#include "CollisionDispatch.h"
-#include "ConcaveVsConvexAlgorithm.h"
-#include "SphereVsSphereAlgorithm.h"
-#include "GJK/GJKAlgorithm.h"
+#include <rp3d/collision/narrowphase/CollisionDispatch.hpp>
+#include <rp3d/collision/narrowphase/ConcaveVsConvexAlgorithm.hpp>
+#include <rp3d/collision/narrowphase/SphereVsSphereAlgorithm.hpp>
+#include <rp3d/collision/narrowphase/GJK/GJKAlgorithm.hpp>
 
 namespace reactphysics3d {
 
@@ -73,6 +72,3 @@ class DefaultCollisionDispatch : public CollisionDispatch {
 }
 
 #endif
-
-
-

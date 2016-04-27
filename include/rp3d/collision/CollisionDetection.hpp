@@ -26,20 +26,18 @@
 #ifndef REACTPHYSICS3D_COLLISION_DETECTION_H
 #define REACTPHYSICS3D_COLLISION_DETECTION_H
 
-// Libraries
-#include "body/CollisionBody.h"
-#include "broadphase/BroadPhaseAlgorithm.h"
-#include "engine/OverlappingPair.h"
-#include "engine/EventListener.h"
-#include "narrowphase/DefaultCollisionDispatch.h"
-#include "memory/MemoryAllocator.h"
-#include "constraint/ContactPoint.h"
 #include <vector>
 #include <map>
 #include <set>
-#include <utility>
 
-/// ReactPhysics3D namespace
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/collision/broadphase/BroadPhaseAlgorithm.hpp>
+#include <rp3d/collision/narrowphase/DefaultCollisionDispatch.hpp>
+#include <rp3d/engine/OverlappingPair.hpp>
+#include <rp3d/engine/EventListener.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
+
 namespace reactphysics3d {
 
 // Declarations

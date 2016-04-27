@@ -23,12 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Vector3.h"
-#include <iostream>
-#include <vector>
+#include <rp3d/mathematics/Vector3.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
 
 // Constructor of the class Vector3D

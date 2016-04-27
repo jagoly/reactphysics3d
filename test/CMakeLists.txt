@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 2.6)
 PROJECT(TESTS)
 
 # Headers
+INCLUDE_DIRECTORIES("../include/rp3d/")
 INCLUDE_DIRECTORIES(${REACTPHYSICS3D_SOURCE_DIR}/test)
 
 # Sources files of tests

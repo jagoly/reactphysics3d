@@ -23,9 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "mathematics_functions.h"
-#include "Vector3.h"
+#include <rp3d/mathematics/Vector3.hpp>
+#include <rp3d/mathematics/mathematics_functions.hpp>
 
 using namespace reactphysics3d;
 

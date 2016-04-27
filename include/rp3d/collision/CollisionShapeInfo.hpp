@@ -26,10 +26,8 @@
 #ifndef REACTPHYSICS3D_COLLISION_SHAPE_INFO_H
 #define REACTPHYSICS3D_COLLISION_SHAPE_INFO_H
 
-// Libraries
-#include "shapes/CollisionShape.h"
+#include <rp3d/collision/shapes/CollisionShape.hpp>
 
-/// Namespace ReactPhysics3D
 namespace reactphysics3d {
 
 class OverlappingPair;

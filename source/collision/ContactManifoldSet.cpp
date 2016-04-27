@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ContactManifoldSet.h"
+#include <rp3d/collision/ContactManifoldSet.hpp>
 
 using namespace reactphysics3d;
 

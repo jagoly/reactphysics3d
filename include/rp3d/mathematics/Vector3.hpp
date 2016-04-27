@@ -26,14 +26,8 @@
 #ifndef REACTPHYSICS3D_VECTOR3_H
 #define REACTPHYSICS3D_VECTOR3_H
 
-// Libraries
-#include <cmath>
-#include <cassert>
-#include "mathematics_functions.h"
-#include "decimal.h"
+#include <rp3d/mathematics/mathematics_functions.hpp>
 
-
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class Vector3

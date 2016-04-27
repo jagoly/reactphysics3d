@@ -26,10 +26,8 @@
 #ifndef REACTPHYSICS3D_RAY_H
 #define REACTPHYSICS3D_RAY_H
 
-// Libraries
-#include "Vector3.h"
+#include <rp3d/mathematics/Vector3.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class Ray

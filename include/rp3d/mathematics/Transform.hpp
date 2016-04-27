@@ -26,12 +26,10 @@
 #ifndef REACTPHYSICS3D_TRANSFORM_H
 #define	REACTPHYSICS3D_TRANSFORM_H
 
-// Libraries
-#include "Matrix3x3.h"
-#include "Vector3.h"
-#include "Quaternion.h"
+#include <rp3d/mathematics/Vector3.hpp>
+#include <rp3d/mathematics/Matrix3x3.hpp>
+#include <rp3d/mathematics/Quaternion.hpp>
 
-// ReactPhysiscs3D namespace
 namespace reactphysics3d {
 
 // Class Transform
@@ -226,4 +224,3 @@ inline Transform& Transform::operator=(const Transform& transform) {
 }
 
 #endif
-

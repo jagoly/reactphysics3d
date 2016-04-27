@@ -23,9 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ConstraintSolver.h"
-#include "Profiler.h"
+#include <rp3d/engine/ConstraintSolver.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 using namespace reactphysics3d;
 

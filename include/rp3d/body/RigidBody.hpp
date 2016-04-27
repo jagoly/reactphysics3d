@@ -26,14 +26,11 @@
 #ifndef REACTPHYSICS3D_RIGID_BODY_H
 #define REACTPHYSICS3D_RIGID_BODY_H
 
-// Libraries
-#include <cassert>
-#include "CollisionBody.h"
-#include "engine/Material.h"
-#include "mathematics/mathematics.h"
-#include "memory/MemoryAllocator.h"
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/engine/Material.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
 
-/// Namespace reactphysics3d
 namespace reactphysics3d {
 
 // Class declarations
@@ -475,4 +472,4 @@ inline void RigidBody::updateTransformWithCenterOfMass() {
 
 }
 
- #endif
+#endif

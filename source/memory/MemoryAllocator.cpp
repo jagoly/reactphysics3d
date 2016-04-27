@@ -23,10 +23,11 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "MemoryAllocator.h"
-#include <cstdlib>
 #include <cassert>
+#include <cstdlib>
+#include <cstring>
+
+#include <rp3d/memory/MemoryAllocator.hpp>
 
 using namespace reactphysics3d;
 

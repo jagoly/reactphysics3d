@@ -23,9 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "FixedJoint.h"
-#include "engine/ConstraintSolver.h"
+#include <rp3d/engine/ConstraintSolver.hpp>
+#include <rp3d/constraint/FixedJoint.hpp>
 
 using namespace reactphysics3d;
 
@@ -326,4 +325,3 @@ void FixedJoint::solvePositionConstraint(const ConstraintSolverData& constraintS
     q2 += Quaternion(0, w2) * q2 * decimal(0.5);
     q2.normalize();
 }
-

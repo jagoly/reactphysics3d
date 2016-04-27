@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Transform.h"
+#include <rp3d/mathematics/Transform.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
 
 // Constructor

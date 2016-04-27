@@ -26,18 +26,15 @@
 #ifndef REACTPHYSICS3D_EPA_ALGORITHM_H
 #define REACTPHYSICS3D_EPA_ALGORITHM_H
 
-// Libraries
-#include "collision/narrowphase/GJK/Simplex.h"
-#include "collision/shapes/CollisionShape.h"
-#include "collision/CollisionShapeInfo.h"
-#include "constraint/ContactPoint.h"
-#include "collision/narrowphase/NarrowPhaseAlgorithm.h"
-#include "mathematics/mathematics.h"
-#include "TriangleEPA.h"
-#include "memory/MemoryAllocator.h"
-#include <algorithm>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/collision/CollisionShapeInfo.hpp>
+#include <rp3d/collision/shapes/CollisionShape.hpp>
+#include <rp3d/collision/narrowphase/GJK/Simplex.hpp>
+#include <rp3d/collision/narrowphase/EPA/TriangleEPA.hpp>
+#include <rp3d/collision/narrowphase/NarrowPhaseAlgorithm.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // ---------- Constants ---------- //
@@ -158,4 +155,3 @@ inline void EPAAlgorithm::init(MemoryAllocator* memoryAllocator) {
 }
 
 #endif
-

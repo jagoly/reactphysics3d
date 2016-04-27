@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "TriangleVertexArray.h"
+#include <rp3d/collision/TriangleVertexArray.hpp>
 
 using namespace reactphysics3d;
 

@@ -23,11 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Simplex.h"
-#include <cfloat>
+#include <rp3d/collision/narrowphase/GJK/Simplex.hpp>
 
-// We want to use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

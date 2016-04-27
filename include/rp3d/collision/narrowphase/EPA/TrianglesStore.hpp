@@ -26,13 +26,10 @@
 #ifndef REACTPHYSICS3D_TRIANGLES_STORE_H
 #define REACTPHYSICS3D_TRIANGLES_STORE_H
 
-#include "TriangleEPA.h"
-
-
-// Libraries
 #include <cassert>
 
-/// ReactPhysics3D namespace
+#include <rp3d/collision/narrowphase/EPA/TriangleEPA.hpp>
+
 namespace reactphysics3d {
 
 // Constants

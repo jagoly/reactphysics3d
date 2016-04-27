@@ -1,58 +1,55 @@
 # Minimum cmake version required
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.3)
 
 # Project configuration
-PROJECT(REACTPHYSICS3D CXX)
+project(REACTPHYSICS3D CXX)
 
 # Build type
-IF (NOT CMAKE_BUILD_TYPE)
-    SET(CMAKE_BUILD_TYPE "Release")
-ENDIF (NOT CMAKE_BUILD_TYPE)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE "Release")
+endif()
 
 # Where to build the library
-SET(LIBRARY_OUTPUT_PATH "lib")
+set(LIBRARY_OUTPUT_PATH "lib")
 
 # Where to build the executables
-SET(OUR_EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
+set(OUR_EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
 
-ENABLE_TESTING()
+enable_testing()
 
 # Options
-OPTION(COMPILE_TESTBED "Select this if you want to build the testbed application" OFF)
-OPTION(COMPILE_TESTS "Select this if you want to build the tests" OFF)
-OPTION(PROFILING_ENABLED "Select this if you want to compile with enabled profiling" OFF)
-OPTION(DOUBLE_PRECISION_ENABLED "Select this if you want to compile using double precision floating values" OFF)
+option(COMPILE_TESTBED "Select this if you want to build the testbed application" OFF)
+option(COMPILE_TESTS "Select this if you want to build the tests" OFF)
+option(PROFILING_ENABLED "Select this if you want to compile with enabled profiling" OFF)
+option(DOUBLE_PRECISION_ENABLED "Select this if you want to compile using double precision floating values" OFF)
 
 # Warning Compiler flags
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 # C++11 flags
-IF(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-	include(CheckCXXCompilerFlag)
-	CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
-	IF(COMPILER_SUPPORTS_CXX11)
-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-	ELSE()
-		message("The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
-	ENDIF()
-ENDIF()
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+    include(CheckCXXCompilerFlag)
+    check_cxx_compiler_flag("-std=c++11" COMPILER_SUPPORTS_CXX11)
+    if(COMPILER_SUPPORTS_CXX11)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    else()
+        message("The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+    endif()
+endif()
 
-# Headers
-INCLUDE_DIRECTORIES(src)
+if(PROFILING_ENABLED)
+    add_definitions(-DIS_PROFILING_ACTIVE)
+endif(PROFILING_ENABLED)
 
-IF(PROFILING_ENABLED)
-    ADD_DEFINITIONS(-DIS_PROFILING_ACTIVE)
-ENDIF(PROFILING_ENABLED)
-
-IF(DOUBLE_PRECISION_ENABLED)
-    ADD_DEFINITIONS(-DIS_DOUBLE_PRECISION_ENABLED)
-ENDIF(DOUBLE_PRECISION_ENABLED)
+if(DOUBLE_PRECISION_ENABLED)
+    add_definitions(-DIS_DOUBLE_PRECISION_ENABLED)
+endif(DOUBLE_PRECISION_ENABLED)
 
 set(SRCDIR "${PROJECT_SOURCE_DIR}/source")
 set(INCDIR "${PROJECT_SOURCE_DIR}/include/rp3d")
 
 # Source files
-SET(REACTPHYSICS3D_SOURCES
+set(REACTPHYSICS3D_SOURCES
     "${INCDIR}/configuration.hpp"
     "${INCDIR}/decimal.hpp"
     "${INCDIR}/reactphysics3d.hpp"
@@ -181,15 +178,18 @@ SET(REACTPHYSICS3D_SOURCES
     "${INCDIR}/memory/Stack.hpp"
 )
 
+# Include headers
+include_directories("${PROJECT_SOURCE_DIR}/include")
+
 # Create the library
-ADD_LIBRARY(reactphysics3d STATIC ${REACTPHYSICS3D_SOURCES})
+add_library(reactphysics3d STATIC ${REACTPHYSICS3D_SOURCES})
 
 # If we need to compile the testbed application
-IF(COMPILE_TESTBED)
+if(COMPILE_TESTBED)
    add_subdirectory(testbed/)
-ENDIF(COMPILE_TESTBED)
+endif(COMPILE_TESTBED)
 
 # If we need to compile the tests
-IF(COMPILE_TESTS)
+if(COMPILE_TESTS)
    add_subdirectory(test/)
-ENDIF(COMPILE_TESTS)
+endif(COMPILE_TESTS)

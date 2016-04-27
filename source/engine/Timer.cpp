@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Timer.h"
+#include <rp3d/engine/Timer.hpp>
 
-// We want to use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

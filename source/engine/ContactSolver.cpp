@@ -23,15 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ContactSolver.h"
-#include "DynamicsWorld.h"
-#include "body/RigidBody.h"
-#include "Profiler.h"
-#include <limits>
+#include <rp3d/body/RigidBody.hpp>
+#include <rp3d/engine/ContactSolver.hpp>
+#include <rp3d/engine/DynamicsWorld.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 using namespace reactphysics3d;
-using namespace std;
 
 // Constants initialization
 const decimal ContactSolver::BETA = decimal(0.2);
@@ -541,7 +538,7 @@ void ContactSolver::solve() {
             decimal beta = mIsSplitImpulseActive ? BETA_SPLIT_IMPULSE : BETA;
             decimal biasPenetrationDepth = 0.0;
             if (contactPoint.penetrationDepth > SLOP) biasPenetrationDepth = -(beta/mTimeStep) *
-                    max(0.0f, float(contactPoint.penetrationDepth - SLOP));
+                    std::max(0.0f, float(contactPoint.penetrationDepth - SLOP));
             decimal b = biasPenetrationDepth + contactPoint.restitutionBias;
 
             // Compute the Lagrange multiplier lambda

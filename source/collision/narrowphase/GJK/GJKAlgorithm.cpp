@@ -23,18 +23,11 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "GJKAlgorithm.h"
-#include "Simplex.h"
-#include "constraint/ContactPoint.h"
-#include "configuration.h"
-#include "engine/Profiler.h"
-#include <algorithm>
-#include <cmath>
-#include <cfloat>
-#include <cassert>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/collision/narrowphase/GJK/GJKAlgorithm.hpp>
+#include <rp3d/collision/narrowphase/GJK/Simplex.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
-// We want to use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

@@ -26,10 +26,8 @@
 #ifndef REACTPHYSICS3D_AABB_H
 #define REACTPHYSICS3D_AABB_H
 
-// Libraries
-#include "mathematics/mathematics.h"
+#include <rp3d/mathematics/mathematics.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
     
 // Class AABB

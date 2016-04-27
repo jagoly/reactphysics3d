@@ -26,11 +26,8 @@
 #ifndef REACTPHYSICS3D_MEMORY_ALLOCATOR_H
 #define REACTPHYSICS3D_MEMORY_ALLOCATOR_H
 
-// Libraries
-#include <cstring>
-#include "configuration.h"
+#include <rp3d/configuration.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class MemoryAllocator

@@ -26,12 +26,11 @@
 #ifndef REACTPHYSICS3D_CONCAVE_MESH_SHAPE_H
 #define REACTPHYSICS3D_CONCAVE_MESH_SHAPE_H
 
-// Libraries
-#include "ConcaveShape.h"
-#include "collision/broadphase/DynamicAABBTree.h"
-#include "collision/TriangleMesh.h"
-#include "collision/shapes/TriangleShape.h"
-#include "engine/Profiler.h"
+#include <rp3d/collision/TriangleMesh.hpp>
+#include <rp3d/collision/shapes/ConcaveShape.hpp>
+#include <rp3d/collision/shapes/TriangleShape.hpp>
+#include <rp3d/collision/broadphase/DynamicAABBTree.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 namespace reactphysics3d {
 
@@ -231,5 +230,5 @@ inline void ConvexTriangleAABBOverlapCallback::notifyOverlappingNode(int nodeId)
 }
 
 }
-#endif
 
+#endif

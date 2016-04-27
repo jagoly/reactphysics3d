@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_EVENT_LISTENER_H
 #define REACTPHYSICS3D_EVENT_LISTENER_H
 
-// Libraries
-#include "constraint/ContactPoint.h"
+#include <rp3d/constraint/ContactPoint.hpp>
 
 namespace reactphysics3d {
 

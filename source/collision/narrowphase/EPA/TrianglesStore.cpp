@@ -23,10 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "TrianglesStore.h"
+#include <rp3d/collision/narrowphase/EPA/TrianglesStore.hpp>
 
-// We use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

@@ -26,12 +26,12 @@
 #ifndef REACTPHYSICS3D_BROAD_PHASE_ALGORITHM_H
 #define REACTPHYSICS3D_BROAD_PHASE_ALGORITHM_H
 
-// Libraries
 #include <vector>
-#include "body/CollisionBody.h"
-#include "collision/ProxyShape.h"
-#include "DynamicAABBTree.h"
-#include "engine/Profiler.h"
+
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/broadphase/DynamicAABBTree.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 /// Namespace ReactPhysics3D
 namespace reactphysics3d {

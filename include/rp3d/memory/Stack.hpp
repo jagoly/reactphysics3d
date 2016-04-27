@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_STACK_H
 #define REACTPHYSICS3D_STACK_H
 
-// Libraries
-#include "configuration.h"
+#include <rp3d/configuration.hpp>
 
 namespace reactphysics3d {
 

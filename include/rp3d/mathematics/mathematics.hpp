@@ -26,19 +26,13 @@
 #ifndef REACTPHYSICS3D_MATHEMATICS_H
 #define REACTPHYSICS3D_MATHEMATICS_H
 
-// Libraries
-#include "Matrix3x3.h"
-#include "Matrix2x2.h"
-#include "Quaternion.h"
-#include "Vector3.h"
-#include "Vector2.h"
-#include "Transform.h"
-#include "Ray.h"
-#include "configuration.h"
-#include "mathematics_functions.h"
-#include <vector>
-#include <cstdio>
-#include <cassert>
-#include <cmath>
+#include <rp3d/mathematics/Ray.hpp>
+#include <rp3d/mathematics/Vector2.hpp>
+#include <rp3d/mathematics/Vector3.hpp>
+#include <rp3d/mathematics/Matrix2x2.hpp>
+#include <rp3d/mathematics/Matrix3x3.hpp>
+#include <rp3d/mathematics/Transform.hpp>
+#include <rp3d/mathematics/Quaternion.hpp>
+#include <rp3d/mathematics/mathematics_functions.hpp>
 
 #endif

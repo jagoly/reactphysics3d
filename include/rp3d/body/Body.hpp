@@ -26,12 +26,8 @@
 #ifndef REACTPHYSICS3D_BODY_H
 #define REACTPHYSICS3D_BODY_H
 
-// Libraries
-#include <stdexcept>
-#include <cassert>
-#include "configuration.h"
+#include <rp3d/configuration.hpp>
 
-/// Namespace reactphysics3d
 namespace reactphysics3d {
 
 // TODO : Make this class abstract
@@ -240,4 +236,4 @@ inline bool Body::operator!=(const Body& body2) const {
 
 }
 
- #endif
+#endif

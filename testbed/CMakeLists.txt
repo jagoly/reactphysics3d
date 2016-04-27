@@ -19,6 +19,7 @@ FILE(COPY "shaders/" DESTINATION "${EXECUTABLE_OUTPUT_PATH}/shaders/")
 FILE(COPY "meshes/" DESTINATION "${EXECUTABLE_OUTPUT_PATH}/meshes/")
 
 # Headers
+INCLUDE_DIRECTORIES("../include/rp3d/")
 INCLUDE_DIRECTORIES(SYSTEM "nanogui/ext/eigen/")
 INCLUDE_DIRECTORIES("src/" "glew/include/" "nanogui/ext/glfw/include/" "nanogui/ext/glew/include/" "nanogui/include/" "nanogui/ext/nanovg/src/" "opengl-framework/src/" "common/" "scenes/")
 

@@ -23,17 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-
 #ifndef REACTPHYSICS3D_MATRIX3X3_H
 #define REACTPHYSICS3D_MATRIX3X3_H
 
-// Libraries
-#include <cassert>
-#include "Vector3.h"
+#include <rp3d/mathematics/Vector3.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
-
 
 // Class Matrix3x3
 /**

@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ProxyShape.h"
+#include <rp3d/collision/ProxyShape.hpp>
 
 using namespace reactphysics3d;
 

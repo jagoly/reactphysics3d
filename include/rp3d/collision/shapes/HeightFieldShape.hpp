@@ -26,10 +26,9 @@
 #ifndef REACTPHYSICS3D_HEIGHTFIELD_SHAPE_H
 #define REACTPHYSICS3D_HEIGHTFIELD_SHAPE_H
 
-// Libraries
-#include "ConcaveShape.h"
-#include "collision/shapes/TriangleShape.h"
-#include "engine/Profiler.h"
+#include <rp3d/collision/shapes/ConcaveShape.hpp>
+#include <rp3d/collision/shapes/TriangleShape.hpp>
+#include <rp3d/engine/Profiler.hpp>
 
 namespace reactphysics3d {
 
@@ -253,5 +252,5 @@ inline void HeightFieldShape::computeLocalInertiaTensor(Matrix3x3& tensor, decim
 }
 
 }
-#endif
 
+#endif

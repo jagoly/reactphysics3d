@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ConcaveMeshShape.h"
+#include <rp3d/collision/shapes/ConcaveMeshShape.hpp>
 
 using namespace reactphysics3d;
 

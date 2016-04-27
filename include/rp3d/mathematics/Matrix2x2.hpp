@@ -26,11 +26,8 @@
 #ifndef REACTPHYSICS3D_MATRIX2X2_H
 #define REACTPHYSICS3D_MATRIX2X2_H
 
-// Libraries
-#include <cassert>
-#include "Vector2.h"
+#include <rp3d/mathematics/Vector2.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class Matrix2x2

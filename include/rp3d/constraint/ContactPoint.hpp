@@ -26,14 +26,10 @@
 #ifndef REACTPHYSICS3D_CONTACT_POINT_H
 #define REACTPHYSICS3D_CONTACT_POINT_H
 
-// Libraries
-#include "body/CollisionBody.h"
-#include "collision/CollisionShapeInfo.h"
-#include "configuration.h"
-#include "mathematics/mathematics.h"
-#include "configuration.h"
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/CollisionShapeInfo.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Structure ContactPointInfo

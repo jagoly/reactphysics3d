@@ -26,13 +26,12 @@
 #ifndef REACTPHYSICS3D_CONCAVE_VS_CONVEX_ALGORITHM_H
 #define	REACTPHYSICS3D_CONCAVE_VS_CONVEX_ALGORITHM_H
 
-// Libraries
-#include "NarrowPhaseAlgorithm.h"
-#include "collision/shapes/ConvexShape.h"
-#include "collision/shapes/ConcaveShape.h"
 #include <unordered_map>
 
-/// Namespace ReactPhysics3D
+#include <rp3d/collision/shapes/ConvexShape.hpp>
+#include <rp3d/collision/shapes/ConcaveShape.hpp>
+#include <rp3d/collision/narrowphase/NarrowPhaseAlgorithm.hpp>
+
 namespace reactphysics3d {
 
 // Class ConvexVsTriangleCallback

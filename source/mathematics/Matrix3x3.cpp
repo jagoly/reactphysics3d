@@ -23,16 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include <iostream>
-#include "Matrix3x3.h"
+#include <rp3d/mathematics/Matrix3x3.hpp>
 
-// Namespaces
 using namespace reactphysics3d;
 
 // Constructor of the class Matrix3x3
 Matrix3x3::Matrix3x3() {
-    // Initialize all values in the matrix to zero
     setAllValues(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
 }
 
@@ -45,7 +41,6 @@ Matrix3x3::Matrix3x3(decimal value) {
 Matrix3x3::Matrix3x3(decimal a1, decimal a2, decimal a3,
                      decimal b1, decimal b2, decimal b3,
                      decimal c1, decimal c2, decimal c3) {
-    // Initialize the matrix with the values
     setAllValues(a1, a2, a3, b1, b2, b3, c1, c2, c3);
 }
 

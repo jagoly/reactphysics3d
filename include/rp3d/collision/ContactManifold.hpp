@@ -26,14 +26,11 @@
 #ifndef REACTPHYSICS3D_CONTACT_MANIFOLD_H
 #define	REACTPHYSICS3D_CONTACT_MANIFOLD_H
 
-// Libraries
-#include <vector>
-#include "body/CollisionBody.h"
-#include "collision/ProxyShape.h"
-#include "constraint/ContactPoint.h"
-#include "memory/MemoryAllocator.h"
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Constants

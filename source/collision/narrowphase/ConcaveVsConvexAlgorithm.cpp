@@ -23,13 +23,11 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "collision/shapes/ConcaveShape.h"
-#include "collision/shapes/TriangleShape.h"
-#include "ConcaveVsConvexAlgorithm.h"
-#include "collision/CollisionDetection.h"
-#include "engine/CollisionWorld.h"
-#include <algorithm>
+#include <rp3d/collision/CollisionDetection.hpp>
+#include <rp3d/collision/shapes/ConcaveShape.hpp>
+#include <rp3d/collision/shapes/TriangleShape.hpp>
+#include <rp3d/collision/narrowphase/ConcaveVsConvexAlgorithm.hpp>
+#include <rp3d/engine/CollisionWorld.hpp>
 
 using namespace reactphysics3d;
 

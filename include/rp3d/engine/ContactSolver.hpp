@@ -26,19 +26,15 @@
 #ifndef REACTPHYSICS3D_CONTACT_SOLVER_H
 #define REACTPHYSICS3D_CONTACT_SOLVER_H
 
-// Libraries
-#include "constraint/ContactPoint.h"
-#include "configuration.h"
-#include "constraint/Joint.h"
-#include "collision/ContactManifold.h"
-#include "Island.h"
-#include "Impulse.h"
 #include <map>
-#include <set>
 
-/// ReactPhysics3D namespace
+#include <rp3d/collision/ContactManifold.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/constraint/Joint.hpp>
+#include <rp3d/engine/Impulse.hpp>
+#include <rp3d/engine/Island.hpp>
+
 namespace reactphysics3d {
-
 
 // Class Contact Solver
 /**

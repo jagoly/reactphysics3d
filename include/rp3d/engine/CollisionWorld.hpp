@@ -26,23 +26,20 @@
 #ifndef REACTPHYSICS3D_COLLISION_WORLD_H
 #define REACTPHYSICS3D_COLLISION_WORLD_H
 
-// Libraries
 #include <vector>
 #include <set>
-#include <list>
-#include <algorithm>
-#include "mathematics/mathematics.h"
-#include "Profiler.h"
-#include "body/CollisionBody.h"
-#include "collision/RaycastInfo.h"
-#include "OverlappingPair.h"
-#include "collision/CollisionDetection.h"
-#include "constraint/Joint.h"
-#include "constraint/ContactPoint.h"
-#include "memory/MemoryAllocator.h"
-#include "EventListener.h"
 
-/// Namespace reactphysics3d
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/CollisionDetection.hpp>
+#include <rp3d/collision/RaycastInfo.hpp>
+#include <rp3d/constraint/ContactPoint.hpp>
+#include <rp3d/constraint/Joint.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
+#include <rp3d/engine/OverlappingPair.hpp>
+#include <rp3d/engine/EventListener.hpp>
+#include <rp3d/engine/Profiler.hpp>
+
 namespace reactphysics3d {
 
 // Declarations

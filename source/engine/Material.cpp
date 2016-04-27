@@ -23,8 +23,7 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "Material.h"
+#include <rp3d/engine/Material.hpp>
 
 using namespace reactphysics3d;
 

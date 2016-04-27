@@ -26,17 +26,16 @@
 #ifndef REACTPHYSICS3D_CONVEX_MESH_SHAPE_H
 #define REACTPHYSICS3D_CONVEX_MESH_SHAPE_H
 
-// Libraries
-#include "ConvexShape.h"
-#include "engine/CollisionWorld.h"
-#include "mathematics/mathematics.h"
-#include "collision/TriangleMesh.h"
-#include "collision/narrowphase/GJK/GJKAlgorithm.h"
 #include <vector>
-#include <set>
 #include <map>
+#include <set>
 
-/// ReactPhysics3D namespace
+#include <rp3d/collision/TriangleMesh.hpp>
+#include <rp3d/collision/narrowphase/GJK/GJKAlgorithm.hpp>
+#include <rp3d/collision/shapes/ConvexShape.hpp>
+#include <rp3d/engine/CollisionWorld.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+
 namespace reactphysics3d {
 
 // Declaration

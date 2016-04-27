@@ -23,11 +23,10 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
 #include <complex>
-#include "configuration.h"
-#include "ConeShape.h"
-#include "collision/ProxyShape.h"
+
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/shapes/ConeShape.hpp>
 
 using namespace reactphysics3d;
 

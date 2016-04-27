@@ -26,13 +26,12 @@
 #ifndef REACTPHYSICS3D_CONSTRAINT_SOLVER_H
 #define REACTPHYSICS3D_CONSTRAINT_SOLVER_H
 
-// Libraries
-#include "configuration.h"
-#include "mathematics/mathematics.h"
-#include "constraint/Joint.h"
-#include "Island.h"
 #include <map>
 #include <set>
+
+#include <rp3d/constraint/Joint.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+#include <rp3d/engine/Island.hpp>
 
 namespace reactphysics3d {
 

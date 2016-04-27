@@ -23,10 +23,9 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
 #include <complex>
-#include "configuration.h"
-#include "ConvexMeshShape.h"
+
+#include <rp3d/collision/shapes/ConvexMeshShape.hpp>
 
 using namespace reactphysics3d;
 

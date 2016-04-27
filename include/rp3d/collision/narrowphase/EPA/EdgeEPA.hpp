@@ -26,11 +26,8 @@
 #ifndef REACTPHYSICS3D_EDGE_EPA_H
 #define REACTPHYSICS3D_EDGE_EPA_H
 
+#include <rp3d/mathematics/mathematics.hpp>
 
-// Libraries
-#include "mathematics/mathematics.h"
-
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 // Class declarations

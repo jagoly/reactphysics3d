@@ -23,11 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "DynamicAABBTree.h"
-#include "BroadPhaseAlgorithm.h"
-#include "memory/Stack.h"
-#include "engine/Profiler.h"
+#include <cstring>
+
+#include <rp3d/collision/broadphase/BroadPhaseAlgorithm.hpp>
+#include <rp3d/collision/broadphase/DynamicAABBTree.hpp>
+#include <rp3d/engine/Profiler.hpp>
+#include <rp3d/memory/Stack.hpp>
 
 using namespace reactphysics3d;
 

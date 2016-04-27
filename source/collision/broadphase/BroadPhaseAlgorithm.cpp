@@ -23,12 +23,12 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "BroadPhaseAlgorithm.h"
-#include "collision/CollisionDetection.h"
-#include "engine/Profiler.h"
+#include <cstring>
 
-// We want to use the ReactPhysics3D namespace
+#include <rp3d/collision/CollisionDetection.hpp>
+#include <rp3d/collision/broadphase/BroadPhaseAlgorithm.hpp>
+#include <rp3d/engine/Profiler.hpp>
+
 using namespace reactphysics3d;
 
 // Constructor

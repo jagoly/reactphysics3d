@@ -23,9 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "DefaultCollisionDispatch.h"
-#include "collision/shapes/CollisionShape.h"
+#include <rp3d/collision/shapes/CollisionShape.hpp>
+#include <rp3d/collision/narrowphase/DefaultCollisionDispatch.hpp>
 
 using namespace reactphysics3d;
 

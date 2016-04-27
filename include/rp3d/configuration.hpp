@@ -26,11 +26,11 @@
 #ifndef REACTPHYSICS3D_CONFIGURATION_H
 #define	REACTPHYSICS3D_CONFIGURATION_H
 
-// Libraries
-#include <limits>
 #include <cfloat>
+#include <limits>
 #include <utility>
-#include "decimal.h"
+
+#include <rp3d/decimal.hpp>
 
 // Windows platform
 #if defined(WIN32) ||defined(_WIN32) || defined(_WIN64) ||defined(__WIN32__) || defined(__WINDOWS__)
@@ -41,7 +41,6 @@
     #define LINUX_OS
 #endif
 
-/// Namespace reactphysics3d
 namespace reactphysics3d {
 
 // ------------------- Type definitions ------------------- //

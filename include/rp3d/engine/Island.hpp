@@ -26,11 +26,10 @@
 #ifndef REACTPHYSICS3D_ISLAND_H
 #define REACTPHYSICS3D_ISLAND_H
 
-// Libraries
-#include "memory/MemoryAllocator.h"
-#include "body/RigidBody.h"
-#include "constraint/Joint.h"
-#include "collision/ContactManifold.h"
+#include <rp3d/body/RigidBody.hpp>
+#include <rp3d/constraint/Joint.hpp>
+#include <rp3d/collision/ContactManifold.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
 
 namespace reactphysics3d {
 

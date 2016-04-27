@@ -26,9 +26,9 @@
 #ifndef REACTPHYSICS3D_MATERIAL_H
 #define REACTPHYSICS3D_MATERIAL_H
 
-// Libraries
 #include <cassert>
-#include "configuration.h"
+
+#include <rp3d/configuration.hpp>
 
 namespace reactphysics3d {
 

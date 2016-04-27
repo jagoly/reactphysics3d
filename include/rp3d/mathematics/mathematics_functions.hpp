@@ -26,14 +26,12 @@
 #ifndef REACTPHYSICS3D_MATHEMATICS_FUNCTIONS_H
 #define REACTPHYSICS3D_MATHEMATICS_FUNCTIONS_H
 
-// Libraries
-#include "configuration.h"
-#include "decimal.h"
-#include <algorithm>
-#include <cassert>
 #include <cmath>
+#include <cassert>
+#include <algorithm>
 
-/// ReactPhysics3D namespace
+#include <rp3d/configuration.hpp>
+
 namespace reactphysics3d {
 
 struct Vector3;

@@ -23,12 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "BoxShape.h"
-#include "collision/ProxyShape.h"
-#include "configuration.h"
-#include <vector>
-#include <cassert>
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/shapes/BoxShape.hpp>
 
 using namespace reactphysics3d;
 

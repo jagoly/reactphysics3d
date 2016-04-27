@@ -26,11 +26,10 @@
 #ifndef REACTPHYSICS3D_PROXY_SHAPE_H
 #define REACTPHYSICS3D_PROXY_SHAPE_H
 
-// Libraries
-#include "body/CollisionBody.h"
-#include "shapes/CollisionShape.h"
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/collision/shapes/CollisionShape.hpp>
 
-namespace  reactphysics3d {
+namespace reactphysics3d {
 
 // Class ProxyShape
 /**

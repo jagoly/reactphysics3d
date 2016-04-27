@@ -23,22 +23,17 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "CollisionDetection.h"
-#include "engine/CollisionWorld.h"
-#include "body/Body.h"
-#include "collision/shapes/BoxShape.h"
-#include "body/RigidBody.h"
-#include "configuration.h"
 #include <cassert>
 #include <complex>
-#include <set>
-#include <utility>
-#include <utility>
 
-// We want to use the ReactPhysics3D namespace
+#include <rp3d/body/Body.hpp>
+#include <rp3d/body/RigidBody.hpp>
+#include <rp3d/collision/shapes/BoxShape.hpp>
+#include <rp3d/collision/CollisionDetection.hpp>
+#include <rp3d/engine/CollisionWorld.hpp>
+#include <rp3d/engine/Profiler.hpp>
+
 using namespace reactphysics3d;
-using namespace std;
 
 // Constructor
 CollisionDetection::CollisionDetection(CollisionWorld* world, MemoryAllocator& memoryAllocator)
@@ -91,7 +86,7 @@ void CollisionDetection::reportCollisionBetweenShapes(CollisionCallback* callbac
                                                       const std::set<uint>& shapes2) {
 
     // For each possible collision pair of bodies
-    map<overlappingpairid, OverlappingPair*>::iterator it;
+    std::map<overlappingpairid, OverlappingPair*>::iterator it;
     for (it = mOverlappingPairs.begin(); it != mOverlappingPairs.end(); ++it) {
 
         OverlappingPair* pair = it->second;
@@ -170,7 +165,7 @@ void CollisionDetection::computeNarrowPhase() {
     mContactOverlappingPairs.clear();
     
     // For each possible collision pair of bodies
-    map<overlappingpairid, OverlappingPair*>::iterator it;
+    std::map<overlappingpairid, OverlappingPair*>::iterator it;
     for (it = mOverlappingPairs.begin(); it != mOverlappingPairs.end(); ) {
 
         OverlappingPair* pair = it->second;
@@ -252,7 +247,7 @@ void CollisionDetection::computeNarrowPhaseBetweenShapes(CollisionCallback* call
     mContactOverlappingPairs.clear();
 
     // For each possible collision pair of bodies
-    map<overlappingpairid, OverlappingPair*>::iterator it;
+    std::map<overlappingpairid, OverlappingPair*>::iterator it;
     for (it = mOverlappingPairs.begin(); it != mOverlappingPairs.end(); ) {
 
         OverlappingPair* pair = it->second;

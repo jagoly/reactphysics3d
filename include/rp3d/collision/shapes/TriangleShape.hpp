@@ -26,11 +26,9 @@
 #ifndef REACTPHYSICS3D_TRIANGLE_SHAPE_H
 #define REACTPHYSICS3D_TRIANGLE_SHAPE_H
 
-// Libraries
-#include "mathematics/mathematics.h"
-#include "ConvexShape.h"
+#include <rp3d/collision/shapes/ConvexShape.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
 
-/// ReactPhysics3D namespace
 namespace reactphysics3d {
 
 /// Raycast test side for the triangle
@@ -221,4 +219,3 @@ inline Vector3 TriangleShape::getVertex(int index) const {
 }
 
 #endif
-

@@ -28,39 +28,39 @@
 * ReactPhysics3D                                                                *
 * Version 0.6.0                                                                 *
 * http://www.reactphysics3d.com                                                 *
-* Daniel Chappuis                                                               *
+* Created by Daniel Chappuis                                                    *
+* Modifications by James Gangur                                                 *
 ********************************************************************************/
 
 #ifndef REACTPHYSICS3D_H
 #define REACTPHYSICS3D_H
 
-// Libraries
-#include "configuration.h"
-#include "mathematics/mathematics.h"
-#include "body/CollisionBody.h"
-#include "body/RigidBody.h"
-#include "engine/DynamicsWorld.h"
-#include "engine/CollisionWorld.h"
-#include "engine/Material.h"
-#include "engine/EventListener.h"
-#include "collision/shapes/CollisionShape.h"
-#include "collision/shapes/BoxShape.h"
-#include "collision/shapes/SphereShape.h"
-#include "collision/shapes/ConeShape.h"
-#include "collision/shapes/CylinderShape.h"
-#include "collision/shapes/CapsuleShape.h"
-#include "collision/shapes/ConvexMeshShape.h"
-#include "collision/shapes/ConcaveMeshShape.h"
-#include "collision/shapes/HeightFieldShape.h"
-#include "collision/shapes/AABB.h"
-#include "collision/ProxyShape.h"
-#include "collision/RaycastInfo.h"
-#include "collision/TriangleMesh.h"
-#include "collision/TriangleVertexArray.h"
-#include "constraint/BallAndSocketJoint.h"
-#include "constraint/SliderJoint.h"
-#include "constraint/HingeJoint.h"
-#include "constraint/FixedJoint.h"
+#include <rp3d/configuration.hpp>
+#include <rp3d/mathematics/mathematics.hpp>
+#include <rp3d/body/CollisionBody.hpp>
+#include <rp3d/body/RigidBody.hpp>
+#include <rp3d/engine/DynamicsWorld.hpp>
+#include <rp3d/engine/CollisionWorld.hpp>
+#include <rp3d/engine/Material.hpp>
+#include <rp3d/engine/EventListener.hpp>
+#include <rp3d/collision/shapes/CollisionShape.hpp>
+#include <rp3d/collision/shapes/BoxShape.hpp>
+#include <rp3d/collision/shapes/SphereShape.hpp>
+#include <rp3d/collision/shapes/ConeShape.hpp>
+#include <rp3d/collision/shapes/CylinderShape.hpp>
+#include <rp3d/collision/shapes/CapsuleShape.hpp>
+#include <rp3d/collision/shapes/ConvexMeshShape.hpp>
+#include <rp3d/collision/shapes/ConcaveMeshShape.hpp>
+#include <rp3d/collision/shapes/HeightFieldShape.hpp>
+#include <rp3d/collision/shapes/AABB.hpp>
+#include <rp3d/collision/ProxyShape.hpp>
+#include <rp3d/collision/RaycastInfo.hpp>
+#include <rp3d/collision/TriangleMesh.hpp>
+#include <rp3d/collision/TriangleVertexArray.hpp>
+#include <rp3d/constraint/BallAndSocketJoint.hpp>
+#include <rp3d/constraint/SliderJoint.hpp>
+#include <rp3d/constraint/HingeJoint.hpp>
+#include <rp3d/constraint/FixedJoint.hpp>
 
 /// Alias to the ReactPhysics3D namespace
 namespace rp3d = reactphysics3d;

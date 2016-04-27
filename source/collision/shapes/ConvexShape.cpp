@@ -23,11 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "ConvexShape.h"
+#include <rp3d/collision/shapes/ConvexShape.hpp>
 
-
-// We want to use the ReactPhysics3D namespace
 using namespace reactphysics3d;
 
 // Constructor

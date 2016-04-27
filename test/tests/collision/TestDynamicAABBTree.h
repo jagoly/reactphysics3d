@@ -28,7 +28,7 @@
 
 // Libraries
 #include "Test.h"
-#include "collision/broadphase/DynamicAABBTree.h"
+#include "collision/broadphase/DynamicAABBTree.hpp"
 #include <vector>
 
 /// Reactphysics3D namespace

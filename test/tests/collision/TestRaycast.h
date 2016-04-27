@@ -28,17 +28,17 @@
 
 // Libraries
 #include "Test.h"
-#include "engine/CollisionWorld.h"
-#include "body/CollisionBody.h"
-#include "collision/shapes/BoxShape.h"
-#include "collision/shapes/SphereShape.h"
-#include "collision/shapes/CapsuleShape.h"
-#include "collision/shapes/ConeShape.h"
-#include "collision/shapes/ConvexMeshShape.h"
-#include "collision/shapes/CylinderShape.h"
-#include "collision/shapes/TriangleShape.h"
-#include "collision/shapes/ConcaveMeshShape.h"
-#include "collision/shapes/HeightFieldShape.h"
+#include "engine/CollisionWorld.hpp"
+#include "body/CollisionBody.hpp"
+#include "collision/shapes/BoxShape.hpp"
+#include "collision/shapes/SphereShape.hpp"
+#include "collision/shapes/CapsuleShape.hpp"
+#include "collision/shapes/ConeShape.hpp"
+#include "collision/shapes/ConvexMeshShape.hpp"
+#include "collision/shapes/CylinderShape.hpp"
+#include "collision/shapes/TriangleShape.hpp"
+#include "collision/shapes/ConcaveMeshShape.hpp"
+#include "collision/shapes/HeightFieldShape.hpp"
 
 /// Reactphysics3D namespace
 namespace reactphysics3d {

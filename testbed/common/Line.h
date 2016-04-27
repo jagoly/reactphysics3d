@@ -28,7 +28,7 @@
 
 // Libraries
 #include "openglframework.h"
-#include "reactphysics3d.h"
+#include "reactphysics3d.hpp"
 
 // Class Line
 class Line : public openglframework::Object3D {

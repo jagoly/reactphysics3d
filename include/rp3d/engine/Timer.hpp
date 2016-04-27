@@ -26,12 +26,10 @@
 #ifndef REACTPHYSICS3D_TIMER_H
 #define REACTPHYSICS3D_TIMER_H
 
-// Libraries
-#include <stdexcept>
-#include <iostream>
 #include <ctime>
 #include <cassert>
-#include "configuration.h"
+
+#include <rp3d/configuration.hpp>
 
 #if defined(WINDOWS_OS)   // For Windows platform
    #define NOMINMAX       // This is used to avoid definition of max() and min() macros
@@ -40,8 +38,6 @@
    #include <sys/time.h>
 #endif
 
-
-/// Namespace ReactPhysics3D
 namespace reactphysics3d {
 
 // Class Timer
@@ -197,4 +193,4 @@ inline void Timer::update() {
 
 }
 
- #endif
+#endif

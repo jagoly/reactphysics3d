@@ -26,8 +26,7 @@
 #ifndef REACTPHYSICS3D_TRIANGLE_VERTEX_ARRAY_H
 #define REACTPHYSICS3D_TRIANGLE_VERTEX_ARRAY_H
 
-// Libraries
-#include "configuration.h"
+#include <rp3d/configuration.hpp>
 
 namespace reactphysics3d {
 
@@ -157,4 +156,3 @@ inline unsigned char* TriangleVertexArray::getIndicesStart() const {
 }
 
 #endif
-

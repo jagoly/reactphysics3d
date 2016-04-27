@@ -23,9 +23,8 @@
 *                                                                               *
 ********************************************************************************/
 
-// Libraries
-#include "BallAndSocketJoint.h"
-#include "engine/ConstraintSolver.h"
+#include <rp3d/engine/ConstraintSolver.hpp>
+#include <rp3d/constraint/BallAndSocketJoint.hpp>
 
 using namespace reactphysics3d;
 

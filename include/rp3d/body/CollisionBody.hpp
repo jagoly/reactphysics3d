@@ -26,18 +26,13 @@
 #ifndef REACTPHYSICS3D_COLLISION_BODY_H
 #define REACTPHYSICS3D_COLLISION_BODY_H
 
-// Libraries
-#include <stdexcept>
-#include <cassert>
-#include "Body.h"
-#include "mathematics/Transform.h"
-#include "collision/shapes/AABB.h"
-#include "collision/shapes/CollisionShape.h"
-#include "collision/RaycastInfo.h"
-#include "memory/MemoryAllocator.h"
-#include "configuration.h"
+#include <rp3d/body/Body.hpp>
+#include <rp3d/collision/RaycastInfo.hpp>
+#include <rp3d/collision/shapes/AABB.hpp>
+#include <rp3d/collision/shapes/CollisionShape.hpp>
+#include <rp3d/memory/MemoryAllocator.hpp>
+#include <rp3d/mathematics/Transform.hpp>
 
-/// Namespace reactphysics3d
 namespace reactphysics3d {
 
 // Class declarations
@@ -303,4 +298,4 @@ inline Vector3 CollisionBody::getLocalVector(const Vector3& worldVector) const {
 
 }
 
- #endif
+#endif
