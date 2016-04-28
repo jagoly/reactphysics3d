@@ -1,6 +1,6 @@
-[![Travis Build Status](https://travis-ci.org/DanielChappuis/reactphysics3d.svg?branch=master)](https://travis-ci.org/DanielChappuis/reactphysics3d)
-
 ## ReactPhysics3D
+
+This fork of ReactPhysics3D has been modified by me, James Gangur, to better suit my development style. I have seperated headers from source, changed the headers' file extention to .hpp, significantly improved the CMake files by adding a few more options and fixed some issues building with newer GCC versions. The include hierarchy has also been tidied up, reducing compilation time and preventing the inclusion of many unneeded headers in client code. I have also fixed or tweaked various formatting issues where I came across them. As of yet, I have not made any functionality changes to the library itself, and I don't intend to in the near future. The repo is currently forked from the stable 0.6.0 release, but this will change if Daniel does any cool new stuff in master.
 
 ReactPhysics3D is an open source C++ physics engine library that can be used in 3D simulations and games.
 

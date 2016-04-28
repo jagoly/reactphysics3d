@@ -26,7 +26,9 @@
 #ifndef REACTPHYSICS3D_PROFILER_H
 #define REACTPHYSICS3D_PROFILER_H
 
-#ifdef IS_PROFILING_ACTIVE
+#ifdef RP3D_ENABLE_PROFILER
+
+#include <iosfwd>
 
 #include <rp3d/configuration.hpp>
 #include <rp3d/engine/Timer.hpp>
@@ -378,7 +380,7 @@ inline void Profiler::destroy() {
 
 }
 
-#else   // In profile is not active
+#else
 
 // Empty macro in case profiling is not active
 #define PROFILE(name)

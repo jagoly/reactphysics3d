@@ -23,10 +23,11 @@
 *                                                                               *
 ********************************************************************************/
 
-#ifdef IS_PROFILING_ACTIVE
+#ifdef RP3D_ENABLE_PROFILER
 
-// Libraries
-#include "Profiler.h"
+#include <ostream>
+
+#include <rp3d/engine/Profiler.hpp>
 
 using namespace reactphysics3d;
 

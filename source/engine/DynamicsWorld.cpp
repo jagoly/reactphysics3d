@@ -23,6 +23,10 @@
 *                                                                               *
 ********************************************************************************/
 
+#ifdef RP3D_ENABLE_PROFILER
+#include <iostream>
+#endif
+
 #include <rp3d/engine/DynamicsWorld.hpp>
 #include <rp3d/constraint/BallAndSocketJoint.hpp>
 #include <rp3d/constraint/SliderJoint.hpp>
@@ -98,7 +102,7 @@ DynamicsWorld::~DynamicsWorld() {
     assert(mJoints.size() == 0);
     assert(mRigidBodies.size() == 0);
 
-#ifdef IS_PROFILING_ACTIVE
+#ifdef RP3D_ENABLE_PROFILER
 
     // Print the profiling report
     Profiler::printReport(std::cout);
@@ -115,7 +119,7 @@ DynamicsWorld::~DynamicsWorld() {
  */
 void DynamicsWorld::update(decimal timeStep) {
 
-#ifdef IS_PROFILING_ACTIVE
+#ifdef RP3D_ENABLE_PROFILER
     // Increment the frame counter of the profiler
     Profiler::incrementFrameCounter();
 #endif

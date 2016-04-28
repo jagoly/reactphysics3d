@@ -1,30 +1,16 @@
-# Minimum cmake version required
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
+project(RP3D_TESTBED CXX)
 
-# Project configuration
-PROJECT(Testbed)
+# Build bundled NanoGUI
+set(LIBRARY_OUTPUT_PATH "")
+add_subdirectory("nanogui")
 
-# Where to build the executables
-SET(EXECUTABLE_OUTPUT_PATH "${OUR_EXECUTABLE_OUTPUT_PATH}/testbed")
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${EXECUTABLE_OUTPUT_PATH})
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${EXECUTABLE_OUTPUT_PATH})
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${EXECUTABLE_OUTPUT_PATH})
+# Copy the shaders and meshes used for the demo into the build directory
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/build/testbed")
+file(COPY "shaders" DESTINATION "${EXECUTABLE_OUTPUT_PATH}")
+file(COPY "meshes" DESTINATION "${EXECUTABLE_OUTPUT_PATH}")
 
-ADD_SUBDIRECTORY(nanogui/)
-
-# Copy the shaders used for the demo into the build directory
-FILE(COPY "shaders/" DESTINATION "${EXECUTABLE_OUTPUT_PATH}/shaders/")
-
-# Copy the meshes used for the demo into the build directory
-FILE(COPY "meshes/" DESTINATION "${EXECUTABLE_OUTPUT_PATH}/meshes/")
-
-# Headers
-INCLUDE_DIRECTORIES("../include/rp3d/")
-INCLUDE_DIRECTORIES(SYSTEM "nanogui/ext/eigen/")
-INCLUDE_DIRECTORIES("src/" "glew/include/" "nanogui/ext/glfw/include/" "nanogui/ext/glew/include/" "nanogui/include/" "nanogui/ext/nanovg/src/" "opengl-framework/src/" "common/" "scenes/")
-
-# OpenGLFramework source files
-SET(OPENGLFRAMEWORK_SOURCES
+set(OPENGLFRAMEWORK_SOURCES
     opengl-framework/src/maths/Color.h
     opengl-framework/src/maths/Matrix3.h
     opengl-framework/src/maths/Matrix4.h
@@ -57,8 +43,7 @@ SET(OPENGLFRAMEWORK_SOURCES
     opengl-framework/src/VertexArrayObject.cpp
 )
 
-# Testbed source files
-SET(TESTBED_SOURCES
+set(TESTBED_SOURCES
     src/Main.cpp
     src/TestbedApplication.h
     src/TestbedApplication.cpp
@@ -72,8 +57,7 @@ SET(TESTBED_SOURCES
     src/Timer.cpp
 )
 
-# Common source files
-SET(COMMON_SOURCES
+set(COMMON_SOURCES
     common/Box.h
     common/Box.cpp
     common/Cone.h
@@ -102,8 +86,7 @@ SET(COMMON_SOURCES
     common/PerlinNoise.cpp
 )
 
-# Examples scenes source files
-SET(SCENES_SOURCES
+set(SCENES_SOURCES
     scenes/cubes/CubesScene.h
     scenes/cubes/CubesScene.cpp
     scenes/joints/JointsScene.h
@@ -119,17 +102,29 @@ SET(SCENES_SOURCES
 )
 
 # Add .user file to set debug path in Visual Studio
-SET(USER_FILE testbed.vcxproj.user)
-SET(VS_USERFILE_WORKING_DIRECTORY_DEBUG ${EXECUTABLE_OUTPUT_PATH})
-SET(OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/${USER_FILE})
-CONFIGURE_FILE(VisualStudioUserTemplate.user ${USER_FILE} @ONLY)
+set(USER_FILE testbed.vcxproj.user)
+set(VS_USERFILE_WORKING_DIRECTORY_DEBUG ${EXECUTABLE_OUTPUT_PATH})
+set(OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR}/${USER_FILE})
+configure_file(VisualStudioUserTemplate.user ${USER_FILE} @ONLY)
 
-# Create the executable
-ADD_EXECUTABLE(testbed ${TESTBED_SOURCES} ${SCENES_SOURCES} ${COMMON_SOURCES} ${OPENGLFRAMEWORK_SOURCES})
+# Include ReactPhysics3D Headers
+include_directories("../include/rp3d")
 
-# Enable C++11 features
-set_property(TARGET testbed PROPERTY CXX_STANDARD 11)
-set_property(TARGET testbed PROPERTY CXX_STANDARD_REQUIRED ON)
+# Include NanoGUI, glew, glfw and NanoVG headers
+include_directories("glew/include" "nanogui/ext/glfw/include" "nanogui/ext/glew/include" "nanogui/include" "nanogui/ext/nanovg/src")
 
-# Link with libraries
-TARGET_LINK_LIBRARIES(testbed reactphysics3d nanogui ${NANOGUI_EXTRA_LIBS})
+# Include Eigen as system headers to prevent compiler warnings
+include_directories(SYSTEM "nanogui/ext/eigen")
+
+# Include OpenGL-Framework and Testbed headers
+include_directories("opengl-framework/src" "src" "common" "scenes")
+
+# Create the executable target
+add_executable(rp3d_testbed ${OPENGLFRAMEWORK_SOURCES} ${TESTBED_SOURCES} ${COMMON_SOURCES} ${SCENES_SOURCES})
+
+# Require and enable C++11 features
+set_property(TARGET rp3d_testbed PROPERTY CXX_STANDARD 11)
+set_property(TARGET rp3d_testbed PROPERTY CXX_STANDARD_REQUIRED ON)
+
+# Link testbed with libraries
+target_link_libraries(rp3d_testbed reactphysics3d nanogui ${NANOGUI_EXTRA_LIBS})

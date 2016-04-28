@@ -1,32 +1,35 @@
-# Minimum cmake version required
-cmake_minimum_required(VERSION 2.8.3)
-
-# Project configuration
+cmake_minimum_required(VERSION 3.0)
 project(REACTPHYSICS3D CXX)
 
-# Build type
+# Release by default
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
 endif()
 
 # Where to build the library
-set(LIBRARY_OUTPUT_PATH "lib")
-
-# Where to build the executables
-set(OUR_EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
+set(LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}/build")
 
 enable_testing()
 
-# Options
-option(COMPILE_TESTBED "Select this if you want to build the testbed application" OFF)
-option(COMPILE_TESTS "Select this if you want to build the tests" OFF)
-option(PROFILING_ENABLED "Select this if you want to compile with enabled profiling" OFF)
-option(DOUBLE_PRECISION_ENABLED "Select this if you want to compile using double precision floating values" OFF)
+# ReactPhysics3D Options
+option(RP3D_BUILD_TESTS "Select this if you want to build the tests" OFF)
+option(RP3D_BUILD_TESTBED "Select this if you want to build the testbed application" OFF)
+option(RP3D_ENABLE_PROFILER "Select this if you want to enable the built in profiler" OFF)
+option(RP3D_DOUBLE_PRECISION "Select this if you want to use double precision floats" OFF)
+option(RP3D_SHARED_LIB "Select this if you want to build a shared library instead" OFF)
 
-# Warning Compiler flags
+if(RP3D_ENABLE_PROFILER)
+    add_definitions(-DRP3D_ENABLE_PROFILER)
+endif()
+
+if(RP3D_DOUBLE_PRECISION)
+    add_definitions(-DRP3D_DOUBLE_PRECISION)
+endif()
+
+# Enable compiler warnings
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
-# C++11 flags
+# Ensure that the compiler supports C++11 and enable it
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     include(CheckCXXCompilerFlag)
     check_cxx_compiler_flag("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -36,14 +39,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID MATCHES "GNU")
         message("The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
     endif()
 endif()
-
-if(PROFILING_ENABLED)
-    add_definitions(-DIS_PROFILING_ACTIVE)
-endif(PROFILING_ENABLED)
-
-if(DOUBLE_PRECISION_ENABLED)
-    add_definitions(-DIS_DOUBLE_PRECISION_ENABLED)
-endif(DOUBLE_PRECISION_ENABLED)
 
 set(SRCDIR "${PROJECT_SOURCE_DIR}/source")
 set(INCDIR "${PROJECT_SOURCE_DIR}/include/rp3d")
@@ -178,18 +173,28 @@ set(REACTPHYSICS3D_SOURCES
     "${INCDIR}/memory/Stack.hpp"
 )
 
-# Include headers
+# Include ReactPhysics3D headers
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
-# Create the library
-add_library(reactphysics3d STATIC ${REACTPHYSICS3D_SOURCES})
+if(NOT RP3D_BUILD_SHARED)
+    # Create a static library target
+    add_library(reactphysics3d STATIC ${REACTPHYSICS3D_SOURCES})
+else()
+    # Create a shared library target
+    add_library(reactphysics3d SHARED ${REACTPHYSICS3D_SOURCES})
+endif()
 
-# If we need to compile the testbed application
-if(COMPILE_TESTBED)
-   add_subdirectory(testbed/)
-endif(COMPILE_TESTBED)
+# Add install target if on Linux
+if(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    install(TARGETS reactphysics3d DESTINATION "lib")
+    install(DIRECTORY ${INCDIR} DESTINATION "include")
+endif()
 
-# If we need to compile the tests
-if(COMPILE_TESTS)
-   add_subdirectory(test/)
-endif(COMPILE_TESTS)
+
+if(RP3D_BUILD_TESTS)
+   add_subdirectory("tests")
+endif()
+
+if(RP3D_BUILD_TESTBED)
+   add_subdirectory("testbed")
+endif()
