@@ -176,7 +176,7 @@ set(REACTPHYSICS3D_SOURCES
 # Include ReactPhysics3D headers
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
-if(NOT RP3D_BUILD_SHARED)
+if(NOT RP3D_SHARED_LIB)
     # Create a static library target
     add_library(reactphysics3d STATIC ${REACTPHYSICS3D_SOURCES})
 else()
