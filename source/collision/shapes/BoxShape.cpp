@@ -102,7 +102,7 @@ bool BoxShape::raycast(const Ray& ray, RaycastInfo& raycastInfo, ProxyShape* pro
                 tMin = t1;
                 normalDirection = currentNormal;
             }
-            tMax = std::min(tMax, t2);
+            tMax = detail::min(tMax, t2);
 
             // If tMin is larger than the maximum raycasting fraction, we return no hit
             if (tMin > ray.maxFraction) return false;

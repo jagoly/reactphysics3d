@@ -28,11 +28,15 @@
 
 #include <cmath>
 #include <cassert>
-#include <algorithm>
 
 #include <rp3d/configuration.hpp>
 
 namespace reactphysics3d {
+
+namespace detail {
+template<class T> inline T min(T _a, T _b) { return _a < _b ? _a : _b; }
+template<class T> inline T max(T _a, T _b) { return _a > _b ? _a : _b; }
+}
 
 struct Vector3;
 
@@ -48,24 +52,24 @@ inline bool approxEqual(decimal a, decimal b, decimal epsilon = MACHINE_EPSILON)
 /// two others values "lowerLimit" and "upperLimit"
 inline int clamp(int value, int lowerLimit, int upperLimit) {
     assert(lowerLimit <= upperLimit);
-    return std::min(std::max(value, lowerLimit), upperLimit);
+    return detail::min(detail::max(value, lowerLimit), upperLimit);
 }
 
 /// Function that returns the result of the "value" clamped by
 /// two others values "lowerLimit" and "upperLimit"
 inline decimal clamp(decimal value, decimal lowerLimit, decimal upperLimit) {
     assert(lowerLimit <= upperLimit);
-    return std::min(std::max(value, lowerLimit), upperLimit);
+    return detail::min(detail::max(value, lowerLimit), upperLimit);
 }
 
 /// Return the minimum value among three values
 inline decimal min3(decimal a, decimal b, decimal c) {
-    return std::min(std::min(a, b), c);
+    return detail::min(detail::min(a, b), c);
 }
 
 /// Return the maximum value among three values
 inline decimal max3(decimal a, decimal b, decimal c) {
-    return std::max(std::max(a, b), c);
+    return detail::max(detail::max(a, b), c);
 }
 
 /// Return true if two values have the same sign

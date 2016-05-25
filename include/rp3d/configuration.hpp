@@ -30,6 +30,11 @@
 #include <limits>
 #include <utility>
 
+// fixes for removing <algorithm> from mathematics_functions
+#include <cstdlib>
+#include <cstring>
+#include <new>
+
 #include <rp3d/decimal.hpp>
 
 // Windows platform

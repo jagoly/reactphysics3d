@@ -26,6 +26,7 @@
 #ifndef REACTPHYSICS3D_CONCAVE_VS_CONVEX_ALGORITHM_H
 #define	REACTPHYSICS3D_CONCAVE_VS_CONVEX_ALGORITHM_H
 
+#include <vector>
 #include <unordered_map>
 
 #include <rp3d/collision/shapes/ConvexShape.hpp>

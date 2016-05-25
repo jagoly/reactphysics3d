@@ -27,6 +27,8 @@
 #define REACTPHYSICS3D_STACK_H
 
 #include <rp3d/configuration.hpp>
+#include <algorithm>
+#include <cstring>
 
 namespace reactphysics3d {
 

@@ -348,26 +348,26 @@ inline bool Vector3::operator<(const Vector3& vector) const {
 
 // Return a vector taking the minimum components of two vectors
 inline Vector3 Vector3::min(const Vector3& vector1, const Vector3& vector2) {
-    return Vector3(std::min(vector1.x, vector2.x),
-                   std::min(vector1.y, vector2.y),
-                   std::min(vector1.z, vector2.z));
+    return Vector3(detail::min(vector1.x, vector2.x),
+                   detail::min(vector1.y, vector2.y),
+                   detail::min(vector1.z, vector2.z));
 }
 
 // Return a vector taking the maximum components of two vectors
 inline Vector3 Vector3::max(const Vector3& vector1, const Vector3& vector2) {
-    return Vector3(std::max(vector1.x, vector2.x),
-                   std::max(vector1.y, vector2.y),
-                   std::max(vector1.z, vector2.z));
+    return Vector3(detail::max(vector1.x, vector2.x),
+                   detail::max(vector1.y, vector2.y),
+                   detail::max(vector1.z, vector2.z));
 }
 
 // Return the minimum value among the three components of a vector
 inline decimal Vector3::getMinValue() const {
-    return std::min(std::min(x, y), z);
+    return detail::min(detail::min(x, y), z);
 }
 
 // Return the maximum value among the three components of a vector
 inline decimal Vector3::getMaxValue() const {
-    return std::max(std::max(x, y), z);
+    return detail::max(detail::max(x, y), z);
 }
 
 // Return the zero vector

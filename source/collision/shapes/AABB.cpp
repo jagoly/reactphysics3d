@@ -51,24 +51,24 @@ AABB::~AABB() {
 
 // Merge the AABB in parameter with the current one
 void AABB::mergeWithAABB(const AABB& aabb) {
-    mMinCoordinates.x = std::min(mMinCoordinates.x, aabb.mMinCoordinates.x);
-    mMinCoordinates.y = std::min(mMinCoordinates.y, aabb.mMinCoordinates.y);
-    mMinCoordinates.z = std::min(mMinCoordinates.z, aabb.mMinCoordinates.z);
+    mMinCoordinates.x = detail::min(mMinCoordinates.x, aabb.mMinCoordinates.x);
+    mMinCoordinates.y = detail::min(mMinCoordinates.y, aabb.mMinCoordinates.y);
+    mMinCoordinates.z = detail::min(mMinCoordinates.z, aabb.mMinCoordinates.z);
 
-    mMaxCoordinates.x = std::max(mMaxCoordinates.x, aabb.mMaxCoordinates.x);
-    mMaxCoordinates.y = std::max(mMaxCoordinates.y, aabb.mMaxCoordinates.y);
-    mMaxCoordinates.z = std::max(mMaxCoordinates.z, aabb.mMaxCoordinates.z);
+    mMaxCoordinates.x = detail::max(mMaxCoordinates.x, aabb.mMaxCoordinates.x);
+    mMaxCoordinates.y = detail::max(mMaxCoordinates.y, aabb.mMaxCoordinates.y);
+    mMaxCoordinates.z = detail::max(mMaxCoordinates.z, aabb.mMaxCoordinates.z);
 }
 
 // Replace the current AABB with a new AABB that is the union of two AABBs in parameters
 void AABB::mergeTwoAABBs(const AABB& aabb1, const AABB& aabb2) {
-    mMinCoordinates.x = std::min(aabb1.mMinCoordinates.x, aabb2.mMinCoordinates.x);
-    mMinCoordinates.y = std::min(aabb1.mMinCoordinates.y, aabb2.mMinCoordinates.y);
-    mMinCoordinates.z = std::min(aabb1.mMinCoordinates.z, aabb2.mMinCoordinates.z);
+    mMinCoordinates.x = detail::min(aabb1.mMinCoordinates.x, aabb2.mMinCoordinates.x);
+    mMinCoordinates.y = detail::min(aabb1.mMinCoordinates.y, aabb2.mMinCoordinates.y);
+    mMinCoordinates.z = detail::min(aabb1.mMinCoordinates.z, aabb2.mMinCoordinates.z);
 
-    mMaxCoordinates.x = std::max(aabb1.mMaxCoordinates.x, aabb2.mMaxCoordinates.x);
-    mMaxCoordinates.y = std::max(aabb1.mMaxCoordinates.y, aabb2.mMaxCoordinates.y);
-    mMaxCoordinates.z = std::max(aabb1.mMaxCoordinates.z, aabb2.mMaxCoordinates.z);
+    mMaxCoordinates.x = detail::max(aabb1.mMaxCoordinates.x, aabb2.mMaxCoordinates.x);
+    mMaxCoordinates.y = detail::max(aabb1.mMaxCoordinates.y, aabb2.mMaxCoordinates.y);
+    mMaxCoordinates.z = detail::max(aabb1.mMaxCoordinates.z, aabb2.mMaxCoordinates.z);
 }
 
 // Return true if the current AABB contains the AABB given in parameter

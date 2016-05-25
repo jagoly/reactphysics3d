@@ -26,6 +26,7 @@
 #ifndef REACTPHYSICS3D_EPA_ALGORITHM_H
 #define REACTPHYSICS3D_EPA_ALGORITHM_H
 
+#include <algorithm>
 #include <rp3d/constraint/ContactPoint.hpp>
 #include <rp3d/collision/CollisionShapeInfo.hpp>
 #include <rp3d/collision/shapes/CollisionShape.hpp>

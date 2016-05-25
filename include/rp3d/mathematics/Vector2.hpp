@@ -320,14 +320,14 @@ inline bool Vector2::operator<(const Vector2& vector) const {
 
 // Return a vector taking the minimum components of two vectors
 inline Vector2 Vector2::min(const Vector2& vector1, const Vector2& vector2) {
-    return Vector2(std::min(vector1.x, vector2.x),
-                   std::min(vector1.y, vector2.y));
+    return Vector2(detail::min(vector1.x, vector2.x),
+                   detail::min(vector1.y, vector2.y));
 }
 
 // Return a vector taking the maximum components of two vectors
 inline Vector2 Vector2::max(const Vector2& vector1, const Vector2& vector2) {
-    return Vector2(std::max(vector1.x, vector2.x),
-                   std::max(vector1.y, vector2.y));
+    return Vector2(detail::max(vector1.x, vector2.x),
+                   detail::max(vector1.y, vector2.y));
 }
 
 // Return the zero vector
